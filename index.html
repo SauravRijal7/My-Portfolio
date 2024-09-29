@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="media.css" />
+
+    <title>My Portfolio</title>
+</head>
+<script src="index.js"></script>
+
+<body class="body-profile">
+    <section class="section-profile">
+    <nav id="navbar-pc">
+        <div class="logo">S R</div>
+        <ul class="nav-list">
+            <li><a href="#profile">Home</a></li>
+            <li><a href="#section-about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav><br>
+    <nav id="hamburger-nav">
+        <div class="hamburger-menu">
+          <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="menu-links">
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          </div>
+        </div>
+      </nav>
+        </div>
+      <br>
+    <section id="profile">
+        <div class="profile-photo">
+            <p class="left-text"> "I didn't fail the test.<br> I just found 100 ways to do it wrong." <br>– Benjamin Franklin</p>
+            <img src="profile1.jpg">
+            <p class="right-text"> A tech enthusiast <br>of<br> Nepali Origin</p>
+
+        </div>
+        <div class="profile-text">
+            <p class="text1"> Hi, I'm</p>
+            <p class="typewriter"> Saurav Rijal</p>
+            <p class="text3"> Student</p>
+            <div id="button-box">
+            <div class="CV">
+                    <button class="CV_button" onclick="window.open('resume.pdf')"> Download CV</button>
+            </div>
+            <div class="contact_me">
+                <button class="contact_button" onclick="location.href='#contact'"> Contact Me</button>
+        </div><br><br>
+        <div id="media"> 
+            <img src="linkdein.png" alt="my linkdein" class="icon1" onclick="location.href='https://www.linkedin.com/in/saurav-rijal-4100b6216/'">
+            <img src="github.png" alt="my github" class="icon2" onclick="location.href='https://github.com/SauravRijal7'">
+            <img src="instagram.png" alt="my instagram" class="icon3" onclick="location.href='https://www.instagram.com/s.a.u______/'">
+            <img src="facebook.png" alt="my facebook" class="icon4" onclick="location.href='https://www.facebook.com/saurav.rijal.37'">
+            </div>
+        </div>
+    </div>
+        </div>
+       
+        </div>
+    </div>
+    </section>
+</section>
+<hr>
+</body>
+<body id="body-about">
+<section id="section-about">
+    <p class="about-text1">Know Me More</p>
+    <p class="about-text2"> ABOUT ME</p><br><br><br>
+    <div class="about-main">
+    <div class="about-content">
+    <img class="about-photo" src="about.png">
+    <img class="medal" src="medal.png">
+    <h1>Experience <br> 2+ years <br> Frontend Development</h1>
+
+    <img src="education.png" class="edu">
+    <h1>Education <br> Higher Education Completed From <br>National School of Sciences </h1>
+
+</div>
+</div>
+ </div>
+</section>
+<hr>
+    <section id="projects">
+      <h2> Browse My Recent</h2>  <br>
+      <p class="project-text"> Projects</p> <br> <br> <br> <br>
+      <div class="projects-container">
+      <div class="project1-container">
+        <img src="DBMS.jpeg" class="project1" alt="DBMS"><br>
+        <h1> Database Management System Using <br>HTML, CSS , JavaScript And PHP</h1>
+       <br> <button class= "github" onclick="location.href = 'https://github.com/SauravRijal7/Student-Database-Management-System'" > Github</button>
+ 
+    </div>
+    <img src="soon.png" class="project2" alt="soon"><br>
+
+    </div>
+    </section>
+<hr><br><br>
+<section id="contact">
+<h2> Let's Talk </h2>  <br>
+      <p class="project-text"> You can Find Me Here</p>   <br> <br>
+      <div class="contact-container">
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p><strong>Email:</strong> sauravplayer1@gmail.com</p>
+            <p><strong>Phone:</strong> +977-9741XXXXXX</p>
+            <p><strong>Address:</strong> Baniyatar , Kathmandu</p>
+        </div>
+
+        <form id="contactForm">
+            <h3>Contact Me</h3>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button onclick="sorry()">Send Message</button>
+        </form>
+    </div>
+    </section>
+    <section class="footer">
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h4>Contact Me</h4>
+                    <a href="mailto:example@email.com">Email: sauravplayer1@gmail.com</a>
+                    <a href="tel:+1234567890">Phone: +977-9741XXXXXX</a>
+                    <p>Address: Baniyatar, Kathmandu</p>
+                </div>
+    
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                   <a href="#profile">Home</a>
+                   <a href="#section-about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+    
+                <div class="footer-section">
+                    <h4>Follow Me</h4>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/saurav.rijal.37" target="_blank">Facebook</a>
+                        <a href="https://github.com/SauravRijal7" target="_blank">Github</a>
+                        <a href="https://www.instagram.com/s.a.u______/" target="_blank">Instagram</a>
+                        <a href="https://www.linkedin.com/in/saurav-rijal-4100b6216/" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="copyright">
+                &copy; 2024 Saurav Rijal. All rights reserved.
+            </div>
+            <button onclick="topFunction()" id="scrollTopBtn" title="Go to top">↑</button>
+
+        </footer>
+    
+    </section>
+    </body>
+</html>
