@@ -273,10 +273,11 @@ a:hover{
   max-width: fit-content;
 }
 #section-about{
-  margin-left: 7rem;
-  padding:2vw;
-  margin-right: 15vw;
-  width: 80%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 0px 23px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 .body-about{
   background-color: black;
@@ -304,9 +305,11 @@ hr{
   margin-top: 7rem;
 }
 #projects{
-  margin-left: 15vw;
-  padding:2vw;
-  margin-right: 13vw;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 0px 23px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 h2{
   text-align: center;
