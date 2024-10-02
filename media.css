@@ -1,0 +1,71 @@
+@media screen and (max-width: 1200px){
+    #navbar-pc{
+        display: none;
+    }
+    #hamburger{
+        display: flex;
+        gap: 50vw;
+    }
+    .section-profile {
+        margin: 0 2rem;
+        padding-top: 1vh;
+      }
+    
+      .profile-photo {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    
+      .right-text,
+      .left-text {
+        font-size: 1.2rem;
+        padding-right: 0;
+        padding-left: 0;
+        text-align: center;
+      }
+    
+      #profile {
+        height: auto;
+        flex-direction: column;
+        gap: 1rem;
+      }
+    
+      .CV_button,
+      .contact_button {
+        width: 100%;
+        padding: 0.5rem;
+        margin: 1rem 0;
+      }
+    
+      .typewriter {
+        font-size: 2rem;
+      }
+    .media{
+        width: 10%;
+    }
+    #button-box{
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 8px;
+        display: block;
+      }
+      .about-content{
+        display: flex;
+        flex-wrap: wrap; 
+        gap: 15vw;
+        width: 100%;
+        font-size: smaller;
+    }
+    .projects-container{
+        display: block;
+       
+      }
+      .project2{
+        display:block;
+        border: 2px solid black;
+        margin: 2rem; 
+        border-radius: 1rem;
+        width: 80%;
+      }
+}
