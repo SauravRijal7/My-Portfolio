@@ -18,7 +18,7 @@ function scrollFunction() {
 function topFunction() {
     window.scrollTo({top: 0, behavior: 'smooth'}); 
 }
-function toggleMenu() {
+function ToggleMenu() {
     const menu = document.querySelector(".menu-links");
     const icon = document.querySelector(".hamburger-icon");
     menu.classList.toggle("open");
