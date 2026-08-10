@@ -5,7 +5,10 @@ import {
 } from "https://cdn.jsdelivr.net/npm/animejs@4.2.2/+esm";
 
 import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.179.1/build/three.module.js";
+import { gsap } from "https://cdn.jsdelivr.net/npm/gsap@3.13.0/index.js";
+import { ScrollTrigger } from "https://cdn.jsdelivr.net/npm/gsap@3.13.0/ScrollTrigger.js";
 
+gsap.registerPlugin(ScrollTrigger);
 import { setupInteractions } from "./interactions.js";
 import { createScene } from "./scene.js";
 
