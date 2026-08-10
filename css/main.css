@@ -1,0 +1,1822 @@
+:root {
+    --paper: #e8e3d8;
+    --paper-2: #d7cfc0;
+    --ink: #171716;
+    --muted: #69655d;
+    --line: rgba(23, 23, 22, 0.22);
+    --accent: #e84a2f;
+    --max: 1440px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: var(--paper);
+    scroll-behavior: auto;
+}
+
+body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Inter, system-ui, sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+::selection {
+    background: var(--ink);
+    color: var(--paper);
+}
+
+.grain {
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    pointer-events: none;
+    opacity: 0.045;
+    mix-blend-mode: multiply;
+}
+
+.ui {
+    position: relative;
+    z-index: 5;
+}
+
+.wrap {
+    width: min(calc(100% - 10vw), var(--max));
+    margin: auto;
+}
+
+.mono {
+    font-family: "DM Mono", monospace;
+}
+
+.micro {
+    font: 500 10px/1.4 "DM Mono", monospace;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 30;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 22px 5vw;
+}
+
+.hero {
+    position: relative;
+    z-index: 5;
+
+    min-height: 100svh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 130px 5vw 90px;
+
+    isolation: isolate;
+}
+
+.hero-grid {
+    position: relative;
+    z-index: 5;
+
+    width: min(100%, var(--max));
+    margin: auto;
+}
+
+#webgl {
+    position: absolute !important;
+    inset: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    pointer-events: none;
+    z-index: -1;
+
+    display: block;
+}
+
+.eyebrow {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+
+    color: #0f172a;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: var(--accent);
+
+    display: inline-block;
+}
+
+h1 {
+    position: relative;
+    z-index: 5;
+
+    font-size: clamp(4.7rem, 13.3vw, 12.5rem);
+    line-height: 0.77;
+    letter-spacing: -0.085em;
+    font-weight: 600;
+
+    margin: 35px 0 55px;
+
+    max-width: 1200px;
+
+    opacity: 1;
+    visibility: visible;
+}
+
+h1 .letter {
+    display: inline-block;
+}
+
+.hero-bottom {
+    position: relative;
+    z-index: 5;
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+
+    gap: 30px;
+    align-items: end;
+}
+
+.lede {
+    max-width: 510px;
+
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    line-height: 1.55;
+
+    color: #0f172a;
+}
+
+.cta {
+    appearance: none;
+
+    border: 1px solid var(--ink);
+    background: var(--paper);
+    color: var(--ink);
+
+    padding: 13px 18px;
+
+    cursor: pointer;
+
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+    font: 500 10px "DM Mono", monospace;
+
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.cta::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: var(--ink);
+
+    transform: translateY(101%);
+
+    transition:
+        transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+
+    z-index: -1;
+}
+
+.cta:hover {
+    color: var(--paper);
+}
+
+.cta:hover::before {
+    transform: translateY(0);
+}
+
+.motion-lab {
+    position: absolute;
+
+    right: clamp(0rem, 4vw, 4rem);
+    bottom: -2rem;
+
+    width: min(37vw, 430px);
+    aspect-ratio: 1.35;
+
+    opacity: 1;
+
+    perspective: 900px;
+}
+
+.lab-tilt {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.lab-svg {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: visible;
+}
+
+.lab-ring {
+    fill: none;
+    stroke: var(--ink);
+    stroke-width: 1.5;
+    transform-origin: center;
+}
+
+.lab-dash {
+    fill: none;
+    stroke: var(--accent);
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-dasharray: 18 10;
+}
+
+.lab-rule {
+    fill: none;
+    stroke: var(--line);
+    stroke-width: 1;
+}
+
+.lab-dot {
+    fill: var(--accent);
+}
+
+.motion-card {
+    position: absolute;
+
+    padding: 10px 12px;
+
+    font: 500 10px/1.15 "DM Mono", monospace;
+    letter-spacing: 0.08em;
+
+    color: var(--paper);
+    background: var(--ink);
+
+    box-shadow: 7px 7px 0 rgba(23,23,22,.13);
+}
+
+.motion-card span {
+    color: var(--accent);
+    font-size: 8px;
+}
+
+.card-a {
+    top: 18%;
+    left: 7%;
+}
+
+.card-b {
+    top: 58%;
+    right: 4%;
+    background: var(--accent);
+}
+
+.card-b span {
+    color: var(--ink);
+}
+
+.card-c {
+    bottom: 3%;
+    left: 37%;
+}
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+
+.section {
+    position: relative;
+    z-index: 5;
+
+    min-height: 100svh;
+
+    padding: 15vh 5vw;
+
+    display: flex;
+    align-items: center;
+
+    isolation: isolate;
+}
+
+.section-inner {
+    position: relative;
+    z-index: 5;
+
+    width: min(100%, var(--max));
+    margin: auto;
+}
+
+.section-title {
+    font-size: clamp(3rem, 7vw, 7rem);
+
+    line-height: 0.88;
+    letter-spacing: -0.07em;
+
+    margin: 20px 0 60px;
+
+    font-weight: 500;
+}
+
+/* =====================================================
+   PROJECTS
+===================================================== */
+
+.project {
+    position: relative;
+    z-index: 5;
+
+    border-top: 1px solid var(--line);
+
+    padding: 34px 0;
+
+    display: grid;
+
+    grid-template-columns: 70px 1fr 190px;
+
+    gap: 30px;
+
+    align-items: start;
+
+    cursor: pointer;
+
+    transition: padding 0.45s ease;
+}
+
+.project:last-child {
+    border-bottom: 1px solid var(--line);
+}
+
+.project:hover {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.project h3 {
+    font-size: clamp(2.5rem, 5vw, 5.5rem);
+
+    line-height: 0.9;
+    letter-spacing: -0.065em;
+
+    margin: 0;
+
+    font-weight: 500;
+}
+
+.project p {
+    max-width: 650px;
+
+    color: #0f172a;
+
+    line-height: 1.65;
+    font-size: 14px;
+
+    margin: 22px 0 0;
+}
+
+.project-meta {
+    text-align: right;
+    color: #0f172a;
+}
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12vw;
+
+    align-items: end;
+}
+
+.about-copy {
+    font-size: clamp(1.7rem, 3.2vw, 3.3rem);
+
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+
+    max-width: 720px;
+}
+
+.body-copy {
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    color: #0f172a;
+
+    max-width: 570px;
+}
+
+/* =====================================================
+   PROCESS
+===================================================== */
+
+.process {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+.process article {
+    padding-top: 22px;
+
+    border-top: 1px solid var(--line);
+}
+
+.process h3 {
+    font-size: 2.6rem;
+
+    letter-spacing: -0.05em;
+
+    margin: 30px 0 15px;
+}
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact-title {
+    font-size: clamp(4rem, 12vw, 12rem);
+
+    line-height: 0.76;
+    letter-spacing: -0.085em;
+
+    font-weight: 500;
+
+    margin: 35px 0 70px;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    position: relative;
+    z-index: 5;
+
+    padding: 35px 5vw 55px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: var(--muted);
+}
+
+/* =====================================================
+   CURSOR
+===================================================== */
+
+.cursor {
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    width: 11px;
+    height: 11px;
+
+    border: 1px solid var(--ink);
+
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 100;
+
+    pointer-events: none;
+
+    transition:
+        width 0.25s ease,
+        height 0.25s ease,
+        background 0.25s ease;
+}
+
+.cursor.active {
+    width: 42px;
+    height: 42px;
+
+    background: rgba(23,23,22,.05);
+}
+
+/* =====================================================
+   LOADER
+===================================================== */
+
+.loader {
+    position: fixed;
+
+    inset: 0;
+
+    background: var(--paper);
+
+    z-index: 200;
+
+    display: grid;
+
+    place-items: center;
+}
+
+.loader-inner {
+    width: min(420px, 70vw);
+}
+
+.loader-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 12px;
+}
+
+.loader-bar {
+    height: 2px;
+
+    background: rgba(23,23,22,.15);
+
+    overflow: hidden;
+}
+
+.loader-fill {
+    height: 100%;
+
+    width: 0%;
+
+    background: var(--ink);
+
+    transform-origin: left center;
+}
+
+/* =====================================================
+   BUS
+===================================================== */
+
+.bus-section {
+    position: relative;
+    z-index: 5;
+
+    width: 100%;
+}
+
+.bus-scene {
+    position: relative;
+
+    width: 100%;
+    height: 500px;
+
+    overflow: hidden;
+
+    background: #e7e1d5;
+
+    border-top: 1px solid rgba(23,23,22,.2);
+    border-bottom: 1px solid rgba(23,23,22,.2);
+
+    perspective: 1000px;
+
+    cursor: crosshair;
+}
+
+.scene-sky {
+    position: absolute;
+    inset: 0;
+
+    overflow: hidden;
+}
+
+.sun {
+    position: absolute;
+
+    width: 120px;
+    height: 120px;
+
+    right: 15%;
+    top: 70px;
+
+    border-radius: 50%;
+
+    background: #171716;
+
+    opacity: .08;
+}
+
+.building {
+    position: absolute;
+
+    bottom: 150px;
+
+    background: #171716;
+
+    opacity: .08;
+}
+
+.building-1 {
+    width: 100px;
+    height: 170px;
+    left: 10%;
+}
+
+.building-2 {
+    width: 150px;
+    height: 230px;
+    left: 28%;
+}
+
+.building-3 {
+    width: 90px;
+    height: 140px;
+    right: 15%;
+}
+
+.road {
+    position: absolute;
+
+    left: -10%;
+    bottom: 0;
+
+    width: 120%;
+    height: 170px;
+
+    background: #171716;
+
+    transform: perspective(500px) rotateX(12deg);
+
+    transform-origin: bottom;
+}
+
+.road-line {
+    position: absolute;
+
+    top: 80px;
+
+    width: 130px;
+    height: 6px;
+
+    background: #e7e1d5;
+}
+
+.line-1 {
+    left: 5%;
+}
+
+.line-2 {
+    left: 28%;
+}
+
+.line-3 {
+    left: 51%;
+}
+
+.line-4 {
+    left: 74%;
+}
+
+.line-5 {
+    left: 97%;
+}
+
+.bus {
+  position: absolute;
+
+  width: 280px;
+  height: 125px;
+
+  left: -300px;
+  bottom: 105px;
+
+  background: #e7e1d5;
+  border: 4px solid #171716;
+
+  border-radius: 12px 12px 5px 5px;
+
+  z-index: 10;
+
+  transform-origin: center bottom;
+
+  box-shadow: 12px 12px 0 #171716;
+}
+
+
+
+/* destination / route information */
+.bus::after {
+  content: "CODE  →  EDIT  →  EXPERIMENT";
+
+  position: absolute;
+  left: 24px;
+  bottom: 18px;
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 1px;
+
+  color: #69655d;
+}
+
+.bus-window {
+    position: absolute;
+
+    top: 18px;
+
+    width: 55px;
+    height: 38px;
+
+    background: #171716;
+
+    border: 2px solid #171716;
+}
+.bus-text {
+    position: absolute;
+
+    left: 12px;
+    top: 32px;
+
+    width: 185px;
+
+    color: #69655d;
+
+    text-align: center;
+
+    font-family: "DM Mono", monospace;
+    font-size: 18px;
+    font-weight: 500;
+
+    letter-spacing: 0.08em;
+    line-height: 1;
+    white-space: nowrap;
+
+    z-index: 20;
+    pointer-events: none;
+}
+.window-1 {
+    left: 18px;
+}
+
+.window-2 {
+    left: 82px;
+}
+
+.window-3 {
+    left: 146px;
+}
+
+.bus-door {
+    position: absolute;
+
+    right: 15px;
+    top: 18px;
+
+    width: 40px;
+    height: 68px;
+
+    border: 2px solid #171716;
+
+    z-index: 15;
+}
+.bus-route {
+  position: absolute;
+
+  left: 50%;
+  bottom: -42px;
+
+  width: 330px;
+  height: 20px;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bus-route::before {
+  content: "";
+
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  top: 50%;
+
+  height: 2px;
+
+  background: #171716;
+
+  z-index: 0;
+}
+
+.bus-stop {
+  position: relative;
+  z-index: 1;
+
+  width: 10px;
+  height: 10px;
+
+  background: #e8e3d8;
+  border: 2px solid #171716;
+  border-radius: 50%;
+}
+.wheel {
+    position: absolute;
+
+    bottom: -24px;
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    background: #171716;
+
+    border: 8px solid #e7e1d5;
+}
+
+.wheel-front {
+    right: 25px;
+}
+
+.wheel-back {
+    left: 25px;
+}
+
+.bus-light {
+    position: absolute;
+
+    right: -5px;
+    top: 65px;
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    background: #171716;
+}
+
+.bus-destination {
+    position: absolute;
+
+    right: 19px;
+    top: 4px;
+
+    font: 700 7px "DM Mono", monospace;
+
+    letter-spacing: .1em;
+}
+
+.scene-label {
+    position: absolute;
+
+    left: 50%;
+    top: 8px;
+
+    transform: translateX(-50%);
+
+    font-family: "DM Mono", monospace;
+    font-size: 7px;
+
+    letter-spacing: .12em;
+
+    color: #171716;
+    opacity: .8;
+
+    z-index: 20;
+}
+/* =====================================================
+   SKIP
+===================================================== */
+
+.skip {
+    position: fixed;
+
+    left: 15px;
+    top: 15px;
+
+    z-index: 300;
+
+    transform: translateY(-150%);
+
+    padding: 10px;
+
+    background: var(--ink);
+
+    color: var(--paper);
+}
+
+.skip:focus {
+    transform: translateY(0);
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .nav {
+        padding: 18px 7vw;
+    }
+
+    .nav .location {
+        display: none;
+    }
+
+    .hero {
+        padding: 120px 7vw 70px;
+    }
+
+    .hero-bottom {
+        grid-template-columns: 1fr;
+    }
+
+    .motion-lab {
+        position: relative;
+
+        right: auto;
+        bottom: auto;
+
+        width: min(100%, 380px);
+
+        margin: 68px 0 -26px auto;
+    }
+
+    .section {
+        padding: 110px 7vw;
+
+        min-height: auto;
+    }
+
+    .project {
+        grid-template-columns: 45px 1fr;
+
+        gap: 15px;
+    }
+
+    .project-meta {
+        grid-column: 2;
+
+        text-align: left;
+    }
+
+    .project:hover {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .about-grid,
+    .process {
+        grid-template-columns: 1fr;
+
+        gap: 65px;
+    }
+
+    .contact-title {
+        margin-bottom: 50px;
+    }
+
+    footer {
+        padding: 30px 7vw 45px;
+
+        gap: 20px;
+
+        flex-direction: column;
+    }
+
+    .cursor {
+        display: none;
+    }
+
+    .bus-scene {
+        height: 350px;
+    }
+
+    .bus {
+        transform: scale(.75);
+
+        transform-origin: center bottom;
+    }
+}
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: .001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .001ms !important;
+    }
+}
+/* ============================================================
+   SR TRANSIT
+============================================================ */
+
+.bus-scene {
+    position: relative;
+    min-height: 420px;
+    overflow: hidden;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    background: #d7cfc0;
+    isolation: isolate;
+}
+
+
+/* ------------------------------------------------------------
+   HEADER
+------------------------------------------------------------ */
+
+.transit-header {
+    position: absolute;
+    top: 18px;
+    left: 24px;
+    right: 24px;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+    letter-spacing: .12em;
+
+    z-index: 20;
+}
+
+#busStatus {
+    opacity: .55;
+}
+
+
+/* ------------------------------------------------------------
+   ROUTE MAP
+------------------------------------------------------------ */
+
+.route-map {
+    position: absolute;
+
+    top: 48px;
+    left: 24px;
+    right: 24px;
+
+    height: 45px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    z-index: 20;
+}
+
+.route-line {
+    position: absolute;
+
+    top: 6px;
+    left: 0;
+    right: 0;
+
+    height: 1px;
+
+    background: rgba(23,23,22,.3);
+}
+
+
+.route-stop {
+    position: relative;
+
+    width: 70px;
+
+    padding: 0;
+
+    border: 0;
+    background: none;
+
+    color: var(--ink);
+
+    cursor: pointer;
+
+    font-family: "DM Mono", monospace;
+    text-align: center;
+}
+
+
+.stop-dot {
+    display: block;
+
+    width: 12px;
+    height: 12px;
+
+    margin: 0 auto 8px;
+
+    border: 2px solid var(--ink);
+
+    background: var(--paper);
+
+    border-radius: 50%;
+
+    transition:
+        transform .3s ease,
+        background .3s ease;
+}
+
+
+.route-stop.active .stop-dot {
+    background: var(--accent);
+    transform: scale(1.25);
+}
+
+
+.route-stop.visited .stop-dot {
+    background: var(--ink);
+}
+
+
+.stop-label {
+    display: block;
+
+    font-size: 8px;
+    letter-spacing: .08em;
+}
+
+
+/* ------------------------------------------------------------
+   SKY
+------------------------------------------------------------ */
+
+.bus-stage {
+    position: relative;
+
+    height: 420px;
+
+    overflow: hidden;
+}
+
+
+.bus-sky {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.14),
+            transparent 55%
+        );
+
+    z-index: -5;
+}
+
+
+/* ------------------------------------------------------------
+   ARCHITECTURAL DISTANCE GRID
+------------------------------------------------------------ */
+
+.bus-distance-grid {
+    position: absolute;
+
+    left: -10%;
+    right: -10%;
+    bottom: 95px;
+
+    height: 150px;
+
+    opacity: .2;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            transparent 48%,
+            rgba(23,23,22,.35) 49%,
+            rgba(23,23,22,.35) 50%,
+            transparent 51%
+        ),
+        linear-gradient(
+            0deg,
+            rgba(23,23,22,.3) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        90px 100%,
+        100% 30px;
+
+    transform:
+        perspective(300px)
+        rotateX(58deg);
+
+    transform-origin: bottom;
+
+    z-index: -2;
+}
+
+
+/* ------------------------------------------------------------
+   ROAD
+------------------------------------------------------------ */
+
+.bus-road {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 105px;
+
+    background: #171716;
+
+    overflow: hidden;
+
+    z-index: 2;
+}
+
+
+.bus-road::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    top: 17px;
+
+    height: 1px;
+
+    background: rgba(231,225,213,.3);
+}
+
+
+.bus-road::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 12px;
+
+    height: 1px;
+
+    background: rgba(231,225,213,.12);
+}
+
+
+.road-line {
+    position: absolute;
+
+    width: 95px;
+    height: 4px;
+
+    left: 0;
+    top: 49px;
+
+    background: #e7e1d5;
+
+    opacity: .8;
+}
+
+
+/* ------------------------------------------------------------
+   BUS
+------------------------------------------------------------ */
+
+.bus {
+    position: absolute;
+
+    width: 280px;
+    height: 125px;
+
+    left: -330px;
+    bottom: 63px;
+
+    padding: 0;
+
+    border: 4px solid #171716;
+    border-radius: 10px;
+
+    background: #e7e1d5;
+
+    box-shadow:
+        12px 12px 0 #171716;
+
+    cursor: pointer;
+
+    transform-origin: center bottom;
+
+    z-index: 10;
+
+    appearance: none;
+}
+
+
+.bus:hover {
+    background: #eee9df;
+}
+
+
+.bus-top-line {
+    position: absolute;
+
+    top: 8px;
+    left: 10px;
+    right: 10px;
+
+    height: 3px;
+
+    background: var(--accent);
+}
+
+
+/* ------------------------------------------------------------
+   ROUTE NUMBER
+------------------------------------------------------------ */
+
+.bus-route-number {
+    position: absolute;
+
+    left: 10px;
+    top: 20px;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+    letter-spacing: .1em;
+}
+
+
+/* ------------------------------------------------------------
+   DESTINATION DISPLAY
+------------------------------------------------------------ */
+
+.bus-destination {
+    position: absolute;
+
+    top: 19px;
+    right: 12px;
+
+    width: 105px;
+
+    padding: 5px 7px;
+
+    background: #171716;
+
+    color: #e7e1d5;
+
+    text-align: left;
+
+    font-family: "DM Mono", monospace;
+}
+
+
+.bus-destination span {
+    display: block;
+
+    font-size: 6px;
+
+    opacity: .5;
+
+    letter-spacing: .08em;
+}
+
+
+.bus-destination strong {
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 10px;
+
+    color: #e7e1d5;
+
+    letter-spacing: .06em;
+}
+
+
+/* ------------------------------------------------------------
+   WINDOWS
+------------------------------------------------------------ */
+
+.bus-window {
+    position: absolute;
+
+    left: 12px;
+    top: 54px;
+
+    width: 190px;
+    height: 39px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    border: 3px solid #171716;
+
+    background:
+        linear-gradient(
+            135deg,
+            #292824,
+            #464139
+        );
+
+    color: #d7cfc0;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 6px;
+    letter-spacing: .06em;
+}
+
+
+.bus-window::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 33.33%;
+
+    width: 1px;
+
+    background: rgba(231,225,213,.25);
+
+    box-shadow:
+        63px 0 rgba(231,225,213,.25);
+}
+
+
+/* ------------------------------------------------------------
+   DOOR
+------------------------------------------------------------ */
+
+.bus-door {
+    position: absolute;
+
+    right: 13px;
+    top: 55px;
+
+    width: 32px;
+    height: 38px;
+
+    border: 3px solid #171716;
+
+    display: flex;
+}
+
+
+.bus-door span {
+    flex: 1;
+
+    border-left: 1px solid #171716;
+}
+
+
+.bus-door span:first-child {
+    border-left: 0;
+}
+
+
+/* ------------------------------------------------------------
+   FRONT LAMP
+------------------------------------------------------------ */
+
+.bus-lamp {
+    position: absolute;
+
+    right: -8px;
+    bottom: 29px;
+
+    width: 10px;
+    height: 15px;
+
+    border: 3px solid #171716;
+
+    background: var(--accent);
+}
+
+
+/* ------------------------------------------------------------
+   WHEELS
+------------------------------------------------------------ */
+
+.wheel {
+    position: absolute;
+
+    bottom: -19px;
+
+    width: 43px;
+    height: 43px;
+
+    border-radius: 50%;
+
+    background: #171716;
+
+    border: 4px solid #e7e1d5;
+
+    box-shadow:
+        inset 0 0 0 5px #3a3732;
+}
+
+
+.wheel span {
+    position: absolute;
+
+    width: 9px;
+    height: 9px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background: #907951;
+}
+
+
+.wheel-left {
+    left: 38px;
+}
+
+
+.wheel-right {
+    right: 38px;
+}
+
+
+/* ------------------------------------------------------------
+   SHADOW
+------------------------------------------------------------ */
+
+.bus-shadow {
+    position: absolute;
+
+    width: 305px;
+    height: 20px;
+
+    left: -330px;
+    bottom: 53px;
+
+    border-radius: 50%;
+
+    background: rgba(0,0,0,.35);
+
+    filter: blur(7px);
+
+    z-index: 5;
+}
+
+
+/* ------------------------------------------------------------
+   CLICK HINT
+------------------------------------------------------------ */
+
+.bus-click-hint {
+    position: absolute;
+
+    right: 24px;
+    bottom: 125px;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 20px;
+
+    letter-spacing: .1em;
+
+    opacity: 1;
+
+    z-index: -1;
+}
+
+
+/* ============================================================
+   NAVIGATION PANEL
+============================================================ */
+
+.bus-nav-panel {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 330px;
+
+    padding: 20px;
+
+    background: #e7e1d5;
+
+    border: 3px solid #171716;
+
+    box-shadow:
+        10px 10px 0 #171716;
+
+    z-index: 999;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform:
+        translateY(20px)
+        scale(.97);
+
+    transition:
+        opacity .3s ease,
+        visibility .3s ease,
+        transform .4s cubic-bezier(.16,1,.3,1);
+}
+
+
+.bus-nav-panel.open {
+    opacity: 1;
+    visibility: visible;
+
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+
+.bus-panel-top {
+    display: flex;
+    justify-content: space-between;
+
+    padding-bottom: 12px;
+
+    border-bottom: 1px solid var(--line);
+
+    font-family: "DM Mono", monospace;
+    font-size: 9px;
+    letter-spacing: .1em;
+}
+
+
+.bus-panel-top button {
+    border: 0;
+
+    background: none;
+
+    font-size: 22px;
+
+    line-height: .7;
+
+    cursor: pointer;
+}
+
+
+.bus-panel-title {
+    padding: 22px 0 15px;
+
+    font-size: 19px;
+
+    font-weight: 700;
+
+    letter-spacing: -.04em;
+}
+
+
+.bus-destinations {
+    display: grid;
+
+    gap: 6px;
+}
+
+
+.bus-destinations button {
+    display: grid;
+
+    grid-template-columns:
+        28px 1fr auto;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 12px 8px;
+
+    border: 1px solid rgba(23,23,22,.18);
+
+    background: transparent;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background .2s ease,
+        transform .2s ease;
+}
+
+
+.bus-destinations button:hover {
+    background: #171716;
+
+    color: #e7e1d5;
+
+    transform: translateX(5px);
+}
+
+
+.bus-destinations button span {
+    font-family: "DM Mono", monospace;
+
+    font-size: 8px;
+
+    opacity: .5;
+}
+
+
+.bus-destinations button strong {
+    font-size: 11px;
+}
+
+
+.bus-destinations button small {
+    font-family: "DM Mono", monospace;
+
+    font-size: 7px;
+
+    opacity: .55;
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 700px) {
+
+    .route-map {
+        left: 10px;
+        right: 10px;
+    }
+
+    .stop-label {
+        font-size: 6px;
+    }
+
+    .bus {
+        width: 235px;
+        height: 108px;
+    }
+
+    .bus-window {
+        width: 155px;
+    }
+
+    .bus-nav-panel {
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        width: auto;
+    }
+
+}

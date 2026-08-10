@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <meta
+        name="theme-color"
+        content="#e7e1d5"
+    >
+
+    <meta
+        name="description"
+        content="Saurav Rijal — Code / Edit / Experiment. Web projects, video editing and creative experiments."
+    >
+
+    <meta
+        property="og:title"
+        content="Saurav Rijal — Code / Edit / Experiment"
+    >
+
+    <meta
+        property="og:description"
+        content="A portfolio for code, video editing and experiments."
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <title>Code / Edit / Experiment</title>
+
+    <link
+        rel="stylesheet"
+        href="./css/main.css"
+    >
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" href="favicon.png">
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     LOADER
+===================================================== -->
+
+<div
+    class="loader"
+    id="loader"
+>
+
+    <div class="loader-inner">
+
+        <div class="loader-top micro">
+
+            <span>
+                SR / WORKSPACE
+            </span>
+
+            <span id="loadPercent">
+                0%
+            </span>
+
+        </div>
+
+
+        <div class="loader-bar">
+
+            <div
+                class="loader-fill"
+                id="loaderFill"
+            ></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     CURSOR
+===================================================== -->
+
+<div class="cursor"></div>
+
+<div class="grain"></div>
+
+
+
+<!-- =====================================================
+     SKIP
+===================================================== -->
+
+<a
+    class="skip"
+    href="#work"
+>
+    Skip to content
+</a>
+
+
+
+<!-- =====================================================
+     NAV
+===================================================== -->
+
+<nav class="nav">
+
+    <a
+        href="#top"
+        class="micro"
+        data-hover
+    >
+        SR / 001
+    </a>
+
+
+    <span class="micro location">
+        KATHMANDU / NEPAL
+    </span>
+
+</nav>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main id="top">
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section
+    class="hero"
+    id="home"
+    aria-labelledby="hero-title"
+>
+
+
+    <div class="hero-grid">
+
+
+        <!-- THREE.JS -->
+        <canvas
+            id="webgl"
+            data-scene="hero"
+            aria-hidden="true"
+        ></canvas>
+
+
+
+        <!-- EYEBROW -->
+
+        <div class="eyebrow micro reveal">
+
+            <span class="dot"></span>
+
+            <span>
+                Creative workspace / online
+            </span>
+
+        </div>
+
+
+
+        <!-- TITLE -->
+
+        <h1
+            id="hero-title"
+            class="reveal"
+        >
+
+            SAURAV<br>
+            RIJAL
+
+        </h1>
+
+
+
+        <!-- HERO BOTTOM -->
+
+        <div class="hero-bottom reveal">
+
+            <p class="lede">
+
+                Code / Edit / Experiment.<br>
+
+                I make websites, edit videos and build
+                things because I want to see what happens.
+
+            </p>
+
+
+            <button
+                class="cta"
+                id="enter"
+                type="button"
+                data-hover
+            >
+
+                Enter workspace →
+
+            </button>
+
+        </div>
+
+
+
+        <!-- MOTION LAB -->
+
+        <div
+            class="motion-lab reveal"
+            aria-hidden="true"
+        >
+
+            <div class="lab-tilt">
+
+
+                <svg
+                    viewBox="0 0 340 250"
+                    class="lab-svg"
+                >
+
+
+                    <circle
+                        class="lab-ring"
+                        cx="168"
+                        cy="126"
+                        r="82"
+                    ></circle>
+
+
+                    <path
+                        class="lab-dash"
+                        d="M42 186C84 78 250 45 298 155"
+                        pathLength="120"
+                    ></path>
+
+
+                    <path
+                        d="M30 210H310M170 26V224"
+                        class="lab-rule"
+                    ></path>
+
+
+                    <circle
+                        class="lab-dot"
+                        cx="80"
+                        cy="104"
+                        r="8"
+                    ></circle>
+
+
+                    <circle
+                        class="lab-dot"
+                        cx="252"
+                        cy="174"
+                        r="5"
+                    ></circle>
+
+
+                </svg>
+
+
+
+                <div class="motion-card card-a">
+
+                    01<br>
+
+                    <span>
+                        WEB
+                    </span>
+
+                </div>
+
+
+                <div class="motion-card card-b">
+
+                    02<br>
+
+                    <span>
+                        MOTION
+                    </span>
+
+                </div>
+
+
+                <div class="motion-card card-c">
+
+                    03<br>
+
+                    <span>
+                        PLAY
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WORK
+===================================================== -->
+
+<section
+    class="section"
+    id="work"
+    aria-labelledby="work-title"
+>
+
+
+    <div class="section-inner">
+
+
+        <div class="micro">
+            01 / Selected work
+        </div>
+
+
+        <h2
+            class="section-title"
+            id="work-title"
+        >
+            Things I've made.
+        </h2>
+
+
+
+        <!-- PROJECT 001 -->
+
+        <a
+            class="project"
+            href="https://outdoornepal.com.np"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-project="print"
+            data-hover
+        >
+
+            <div class="micro">
+                001
+            </div>
+
+
+            <div>
+
+                <h3>
+                    OUTDOOR NEPAL
+                </h3>
+
+
+                <p>
+
+                    A website for a printing business,
+                    bringing a traditional local service
+                    into a cleaner online experience.
+
+                </p>
+
+            </div>
+
+
+            <div class="project-meta micro">
+
+                WEB DESIGN<br>
+                DEVELOPMENT<br>
+                UI / UX
+
+            </div>
+
+        </a>
+
+
+
+        <!-- PROJECT 002 -->
+
+        <article
+            class="project"
+            tabindex="0"
+            role="button"
+            data-project="video"
+            data-hover
+        >
+
+            <div class="micro">
+                002
+            </div>
+
+
+            <div>
+
+                <h3>
+                    VIDEO / CUT
+                </h3>
+
+
+                <p>
+
+                    Video edits focused on pacing,
+                    transitions, visual rhythm and
+                    making raw footage feel intentional.
+
+                </p>
+
+            </div>
+
+
+            <div class="project-meta micro">
+
+                VIDEO EDITING<br>
+                MOTION<br>
+                VISUALS
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PROJECT 003 -->
+
+        <a
+            class="project"
+            href="https://github.com/SauravRijal7"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-project="experiments"
+            data-hover
+        >
+
+            <div class="micro">
+                003
+            </div>
+
+
+            <div>
+
+                <h3>
+                    EXPERIMENTS
+                </h3>
+
+
+                <p>
+
+                    Small web experiments and strange
+                    ideas made to learn, test and
+                    occasionally turn into something useful.
+
+                </p>
+
+            </div>
+
+
+            <div class="project-meta micro">
+
+                WEB EXPERIMENTS<br>
+                CODE<br>
+                PLAY
+
+            </div>
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SR TRANSIT / PORTFOLIO NAVIGATION
+===================================================== -->
+
+<section
+    class="bus-section"
+    id="transit"
+    aria-label="Portfolio navigation"
+>
+
+
+    <div class="bus-scene">
+
+
+        <!-- =================================================
+             TRANSIT HEADER
+        ================================================== -->
+
+        <div class="transit-header">
+
+            <span>
+                SR TRANSIT / 001
+            </span>
+
+            <span id="busStatus">
+                ROUTE ACTIVE
+            </span>
+
+        </div>
+
+
+
+        <!-- =================================================
+             ROUTE MAP
+        ================================================== -->
+
+        <div class="route-map">
+
+
+            <div class="route-line"></div>
+
+
+            <button
+                class="route-stop active"
+                data-target="home"
+                type="button"
+            >
+
+                <span class="stop-dot"></span>
+
+                <span class="stop-label">
+                    HOME
+                </span>
+
+            </button>
+
+
+
+            <button
+                class="route-stop"
+                data-target="work"
+                type="button"
+            >
+
+                <span class="stop-dot"></span>
+
+                <span class="stop-label">
+                    WORK
+                </span>
+
+            </button>
+
+
+
+            <button
+                class="route-stop"
+                data-target="about"
+                type="button"
+            >
+
+                <span class="stop-dot"></span>
+
+                <span class="stop-label">
+                    ABOUT
+                </span>
+
+            </button>
+
+
+
+            <button
+                class="route-stop"
+                data-target="process"
+                type="button"
+            >
+
+                <span class="stop-dot"></span>
+
+                <span class="stop-label">
+                    PROCESS
+                </span>
+
+            </button>
+
+
+
+            <button
+                class="route-stop"
+                data-target="contact"
+                type="button"
+            >
+
+                <span class="stop-dot"></span>
+
+                <span class="stop-label">
+                    CONTACT
+                </span>
+
+            </button>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             BUS WORLD
+        ================================================== -->
+
+        <div class="bus-stage">
+
+
+            <div class="bus-sky"></div>
+
+
+            <div class="bus-distance-grid"></div>
+
+
+
+            <!-- ROAD -->
+
+            <div class="bus-road">
+
+                <div class="road-line"></div>
+                <div class="road-line"></div>
+                <div class="road-line"></div>
+                <div class="road-line"></div>
+                <div class="road-line"></div>
+                <div class="road-line"></div>
+
+            </div>
+
+
+
+            <!-- BUS SHADOW -->
+
+            <div class="bus-shadow"></div>
+
+
+
+            <!-- =================================================
+                 BUS
+            ================================================== -->
+
+            <button
+                class="bus"
+                id="portfolioBus"
+                type="button"
+                aria-label="Open portfolio navigation"
+            >
+
+
+                <div class="bus-top-line"></div>
+
+
+
+                <!-- ROUTE NUMBER -->
+
+                <div class="bus-route-number">
+                    001
+                </div>
+
+
+
+                <!-- DESTINATION -->
+
+                <div class="bus-destination">
+
+                    <span>
+                        NEXT STOP
+                    </span>
+
+                    <strong id="busDestination">
+                        WORK
+                    </strong>
+
+                </div>
+
+
+
+                <!-- WINDOWS -->
+
+                <div class="bus-window">
+
+                    <span>
+                        CODE
+                    </span>
+
+                    <span>
+                        EDIT
+                    </span>
+
+                    <span>
+                        EXPERIMENT
+                    </span>
+
+                </div>
+
+
+
+                <!-- DOOR -->
+
+                <div class="bus-door">
+
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+
+
+                <!-- FRONT LAMP -->
+
+                <div class="bus-lamp"></div>
+
+
+
+                <!-- WHEELS -->
+
+                <div class="wheel wheel-left">
+
+                    <span></span>
+
+                </div>
+
+
+                <div class="wheel wheel-right">
+
+                    <span></span>
+
+                </div>
+
+
+            </button>
+
+
+
+            <!-- HINT -->
+
+            <div class="bus-click-hint">
+
+                CLICK VEHICLE TO SELECT DESTINATION
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             NAVIGATION PANEL
+        ================================================== -->
+
+        <div
+            class="bus-nav-panel"
+            id="busNavPanel"
+        >
+
+
+            <div class="bus-panel-top">
+
+
+                <span>
+                    SR TRANSIT
+                </span>
+
+
+                <button
+                    type="button"
+                    id="closeBusPanel"
+                    aria-label="Close navigation"
+                >
+                    ×
+                </button>
+
+
+            </div>
+
+
+
+            <div class="bus-panel-title">
+
+                SELECT DESTINATION
+
+            </div>
+
+
+
+            <div class="bus-destinations">
+
+
+                <!-- HOME -->
+
+                <button
+                    type="button"
+                    data-target="home"
+                >
+
+                    <span>
+                        01
+                    </span>
+
+                    <strong>
+                        HOME
+                    </strong>
+
+                    <small>
+                        START HERE
+                    </small>
+
+                </button>
+
+
+
+                <!-- WORK -->
+
+                <button
+                    type="button"
+                    data-target="work"
+                >
+
+                    <span>
+                        02
+                    </span>
+
+                    <strong>
+                        WORK
+                    </strong>
+
+                    <small>
+                        SELECTED WORK
+                    </small>
+
+                </button>
+
+
+
+                <!-- ABOUT -->
+
+                <button
+                    type="button"
+                    data-target="about"
+                >
+
+                    <span>
+                        03
+                    </span>
+
+                    <strong>
+                        ABOUT
+                    </strong>
+
+                    <small>
+                        THE PERSON
+                    </small>
+
+                </button>
+
+
+
+                <!-- PROCESS -->
+
+                <button
+                    type="button"
+                    data-target="process"
+                >
+
+                    <span>
+                        04
+                    </span>
+
+                    <strong>
+                        PROCESS
+                    </strong>
+
+                    <small>
+                        HOW I WORK
+                    </small>
+
+                </button>
+
+
+
+                <!-- CONTACT -->
+
+                <button
+                    type="button"
+                    data-target="contact"
+                >
+
+                    <span>
+                        05
+                    </span>
+
+                    <strong>
+                        CONTACT
+                    </strong>
+
+                    <small>
+                        LET'S BUILD
+                    </small>
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section
+    class="section"
+    id="about"
+    aria-labelledby="about-title"
+>
+
+
+    <div class="section-inner about-grid">
+
+
+        <div>
+
+            <div class="micro">
+                02 / About
+            </div>
+
+
+            <h2
+                class="section-title"
+                id="about-title"
+            >
+                Holistic Thinker
+            </h2>
+
+        </div>
+
+
+
+        <div>
+
+
+            <p class="about-copy">
+
+                I'm not trying to fit everything I do
+                into one job title.
+
+            </p>
+
+
+            <p class="body-copy">
+
+                I enjoy building websites, editing videos
+                and experimenting with ideas somewhere
+                between technology and visual creativity.
+                I'm still figuring out exactly where that
+                takes me. That's part of the fun.
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROCESS
+===================================================== -->
+
+<section
+    class="section"
+    id="process"
+    aria-labelledby="process-title"
+>
+
+
+    <div class="section-inner">
+
+
+        <div class="micro">
+            03 / Process
+        </div>
+
+
+        <h2
+            class="section-title"
+            id="process-title"
+        >
+            Find / Make / See.
+        </h2>
+
+
+
+        <div class="process">
+
+
+            <!-- FIND -->
+
+            <article>
+
+                <div class="micro">
+                    01
+                </div>
+
+
+                <h3>
+                    FIND
+                </h3>
+
+
+                <p class="body-copy">
+
+                    Find the problem, idea or something
+                    interesting enough to mess with.
+
+                </p>
+
+            </article>
+
+
+
+            <!-- MAKE -->
+
+            <article>
+
+                <div class="micro">
+                    02
+                </div>
+
+
+                <h3>
+                    MAKE
+                </h3>
+
+
+                <p class="body-copy">
+
+                    Write some code. Open the editor.
+                    Try something. Break it. Fix it.
+
+                </p>
+
+            </article>
+
+
+
+            <!-- SEE -->
+
+            <article>
+
+                <div class="micro">
+                    03
+                </div>
+
+
+                <h3>
+                    SEE
+                </h3>
+
+
+                <p class="body-copy">
+
+                    See what happened. Keep it if it works.
+                    Start again if it doesn't.
+
+                </p>
+
+            </article>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section
+    class="section"
+    id="contact"
+    aria-labelledby="contact-title"
+>
+
+
+    <div class="section-inner">
+
+
+        <div class="micro">
+            04 / Contact
+        </div>
+
+
+        <h2
+            class="contact-title"
+            id="contact-title"
+        >
+
+            LET'S<br>
+            MAKE<br>
+            SOMETHING.
+
+        </h2>
+
+
+
+        <a
+            class="micro"
+            href="mailto:sauravplayer1@gmail.com"
+            data-hover
+        >
+
+            sauravplayer1@gmail.com ↗
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="micro">
+
+
+    <span>
+        SAURAV RIJAL © 2026
+    </span>
+
+
+    <span>
+        CODE / EDIT / EXPERIMENT
+    </span>
+
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script
+    type="module"
+    src="./js/main.js"
+></script>
+
+
+</body>
+
+</html>
