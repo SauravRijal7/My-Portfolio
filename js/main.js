@@ -2322,7 +2322,7 @@ function busAnimation() {
                     "100vw"
                 ],
 
-                duration: 900,
+                duration: 1000,
 
                 loop: true,
 

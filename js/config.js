@@ -1,6 +1,6 @@
 export const site = {
   name: "Saurav Rijal",
-  email: "hello@example.com",
+  email: "sauravplayer1@gmail.com",
   location: "Kathmandu / Nepal",
   projects: [
     {id:"print", title:"PRINT / WEB", year:"2026"},
